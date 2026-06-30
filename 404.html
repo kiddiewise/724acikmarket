@@ -13,6 +13,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17655758745"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17655758745');
+function gtag_report_conversion(url) {
+  var called = false;
+  var callback = function () {
+    if (called) return;
+    called = true;
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  setTimeout(callback, 2000);
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17655758745/1BmzCI21u64bEJn_9eJB',
+      'value': 1.0,
+      'currency': 'TRY',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 </head>
 <body>
 <main id="main">
@@ -24,8 +50,8 @@
           <h1>Bu sayfa artık burada değil.</h1>
           <p class="lead">Aradığın bağlantı taşınmış olabilir. Sipariş vermek için hemen ara ya da WhatsApp'tan yaz; İzmir'de açık market servisi devam ediyor.</p>
           <div class="cta-row">
-            <a href="tel:05333710724" class="btn btn-amber"><span class="phonebig">0533 371 07 24</span></a>
-            <a href="https://wa.me/+905333710724?text=Kolay%20gelsin,%20sipariş%20vermek%20istiyorum." class="btn btn-wa">WhatsApp'tan Yaz</a>
+            <a href="tel:05333710724" class="btn btn-amber" onclick="return gtag_report_conversion('tel:05333710724')"><span class="phonebig">0533 371 07 24</span></a>
+            <a href="https://wa.me/+905333710724?text=Kolay%20gelsin,%20sipariş%20vermek%20istiyorum." class="btn btn-wa" onclick="return gtag_report_conversion('https://wa.me/+905333710724?text=Kolay%20gelsin,%20sipariş%20vermek%20istiyorum.')">WhatsApp'tan Yaz</a>
             <a href="/" class="btn btn-ghost">Anasayfa</a>
             <a href="/hizmet-bolgelerimiz/" class="btn btn-ghost">Hizmet Bölgeleri</a>
           </div>

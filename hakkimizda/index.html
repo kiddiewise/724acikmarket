@@ -26,6 +26,32 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"GroceryStore","name":"724 Açık Market","image":"https://724acikmarket.com/assets/img/og-cover.webp","@id":"https://724acikmarket.com/hakkimizda/","url":"https://724acikmarket.com/hakkimizda/","telephone":"+905333710724","priceRange":"₺₺","address":{"@type":"PostalAddress","addressLocality":"İzmir","addressCountry":"TR"},"areaServed":[{"@type":"City","name":"İzmir"}],"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"},"contactPoint":{"@type":"ContactPoint","telephone":"+905333710724","contactType":"customer service","availableLanguage":"Turkish"}}
 </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17655758745"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17655758745');
+function gtag_report_conversion(url) {
+  var called = false;
+  var callback = function () {
+    if (called) return;
+    called = true;
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  setTimeout(callback, 2000);
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17655758745/1BmzCI21u64bEJn_9eJB',
+      'value': 1.0,
+      'currency': 'TRY',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">İçeriğe atla</a>
@@ -34,10 +60,10 @@
     <a href="../index.html" class="logo"><span class="mark">724</span><span>Açık<b>Market</b></span></a>
     <nav class="navlinks"><a href="../index.html#nasil">Nasıl Çalışır</a><a href="../index.html#urunler">Ürünler</a><a href="../hizmet-bolgelerimiz/">Bölgeler</a><a href="../sss/">S.S.S.</a><a href="../iletisim/">İletişim</a></nav>
     <span class="clockbadge"><span class="dot"></span>Şu an <strong>AÇIK</strong> · <span class="t" id="clock">--:--</span></span>
-    <a href="tel:05333710724" class="btn btn-amber head-cta"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Hemen Ara</a>
+    <a href="tel:05333710724" class="btn btn-amber head-cta" onclick="return gtag_report_conversion('tel:05333710724')"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Hemen Ara</a>
     <button class="menu-toggle" id="menuBtn" aria-label="Menüyü aç" aria-controls="mobnav" aria-expanded="false"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
-  <nav class="mobnav" id="mobnav"><a href="../index.html#nasil">Nasıl Çalışır</a><a href="../index.html#urunler">Ürünler</a><a href="../hizmet-bolgelerimiz/">Bölgeler</a><a href="../sss/">S.S.S.</a><a href="../iletisim/">İletişim</a><a href="tel:05333710724">📞 0533 371 07 24</a></nav>
+  <nav class="mobnav" id="mobnav"><a href="../index.html#nasil">Nasıl Çalışır</a><a href="../index.html#urunler">Ürünler</a><a href="../hizmet-bolgelerimiz/">Bölgeler</a><a href="../sss/">S.S.S.</a><a href="../iletisim/">İletişim</a><a href="tel:05333710724" onclick="return gtag_report_conversion('tel:05333710724')">📞 0533 371 07 24</a></nav>
 </header>
 <main id="main">
 
@@ -73,7 +99,7 @@
     <span class="eyebrow"><span class="dot"></span>Şu an açığız</span>
     <h2>Tanışmanın en hızlı yolu: bir sipariş</h2>
     <p>Ara ya da WhatsApp'tan yaz, ne demek istediğimizi 15 dakikada gör.</p>
-    <div class="cta-row"><a href="tel:05333710724" class="btn btn-amber"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="phonebig">0533 371 07 24</span></a><a href="https://wa.me/+905333710724?text=Kolay%20gelsin,%20sipariş%20vermek%20istiyorum." class="btn btn-wa"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp'tan Yaz</a></div>
+    <div class="cta-row"><a href="tel:05333710724" class="btn btn-amber" onclick="return gtag_report_conversion('tel:05333710724')"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="phonebig">0533 371 07 24</span></a><a href="https://wa.me/+905333710724?text=Kolay%20gelsin,%20sipariş%20vermek%20istiyorum." class="btn btn-wa" onclick="return gtag_report_conversion('https://wa.me/+905333710724?text=Kolay%20gelsin,%20sipariş%20vermek%20istiyorum.')"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp'tan Yaz</a></div>
   </div></div>
 </section>
 </main>
@@ -102,8 +128,8 @@
       </div>
       <div>
         <h4>İletişim</h4>
-        <a href="tel:05333710724"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>0533 371 07 24</a>
-        <a href="https://wa.me/+905333710724"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp ile sipariş</a>
+        <a href="tel:05333710724" onclick="return gtag_report_conversion('tel:05333710724')"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>0533 371 07 24</a>
+        <a href="https://wa.me/+905333710724" onclick="return gtag_report_conversion('https://wa.me/+905333710724')"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp ile sipariş</a>
         <p><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>İzmir geneli paket servis</p>
         <p><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>7 gün 24 saat açık</p>
       </div>
@@ -115,8 +141,8 @@
   </div>
 </footer>
 <div class="mobilebar">
-  <a href="tel:05333710724" class="btn btn-amber"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Ara</a>
-  <a href="https://wa.me/+905333710724?text=Kolay%20gelsin,%20sipariş%20vermek%20istiyorum." class="btn btn-wa"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp</a>
+  <a href="tel:05333710724" class="btn btn-amber" onclick="return gtag_report_conversion('tel:05333710724')"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Ara</a>
+  <a href="https://wa.me/+905333710724?text=Kolay%20gelsin,%20sipariş%20vermek%20istiyorum." class="btn btn-wa" onclick="return gtag_report_conversion('https://wa.me/+905333710724?text=Kolay%20gelsin,%20sipariş%20vermek%20istiyorum.')"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp</a>
 </div>
 <script src="../app.js" defer></script>
 </body>
