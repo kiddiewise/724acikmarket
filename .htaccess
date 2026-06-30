@@ -1,0 +1,46 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Canonical host and HTTPS.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.724acikmarket\.com$ [NC]
+RewriteRule ^ https://724acikmarket.com%{REQUEST_URI} [R=301,L]
+
+# Legacy WordPress URLs.
+Redirect 301 /buca-market-siparis-acik-tekel/ /buca-acik-market/
+Redirect 301 /bornova-7-24-acik-market/ /bornova-acik-market/
+Redirect 301 /izmir-tekel-market/ /
+Redirect 301 /contact/ /iletisim/
+Redirect 301 /contact-2/ /iletisim/
+Redirect 301 /about-2/ /hakkimizda/
+Redirect 301 /customer-cabinet/ /
+Redirect 301 /sitemap_index.xml /sitemap.xml
+Redirect 301 /page-sitemap.xml /sitemap.xml
+Redirect 301 /local-sitemap.xml /sitemap.xml
+Redirect 301 /wp-sitemap.xml /sitemap.xml
+
+RedirectMatch 301 ^/iletisim$ /iletisim/
+RedirectMatch 301 ^/hakkimizda$ /hakkimizda/
+RedirectMatch 301 ^/hizmet-bolgelerimiz$ /hizmet-bolgelerimiz/
+
+# WordPress system endpoints are retired on the static site.
+Redirect 301 /wp-admin/ /
+Redirect 301 /wp-login.php /
+Redirect 301 /xmlrpc.php /
+Redirect 301 /wp-json/ /
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
