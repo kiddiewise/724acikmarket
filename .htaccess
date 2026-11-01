@@ -1,34 +1,25 @@
 Options -Indexes
-
+DirectoryIndex index.html
 RewriteEngine On
 
-# Canonical host and HTTPS.
+# Redirect HTTP and www traffic to the new canonical domain.
 RewriteCond %{HTTPS} !=on [OR]
-RewriteCond %{HTTP_HOST} ^www\.724acikmarket\.com$ [NC]
-RewriteRule ^ https://724acikmarket.com%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.gecemarketservis\.com\.tr$ [NC]
+RewriteRule ^ https://gecemarketservis.com.tr%{REQUEST_URI} [R=301,L]
 
-# Legacy WordPress URLs.
-Redirect 301 /buca-market-siparis-acik-tekel/ /buca-acik-market/
-Redirect 301 /bornova-7-24-acik-market/ /bornova-acik-market/
-Redirect 301 /izmir-tekel-market/ /
-Redirect 301 /contact/ /iletisim/
-Redirect 301 /contact-2/ /iletisim/
-Redirect 301 /about-2/ /hakkimizda/
-Redirect 301 /customer-cabinet/ /
-Redirect 301 /sitemap_index.xml /sitemap.xml
-Redirect 301 /page-sitemap.xml /sitemap.xml
-Redirect 301 /local-sitemap.xml /sitemap.xml
+# Redirect the two previously indexed WordPress district pages.
+RewriteRule ^buca-[^-]+-7-24-market-servisi/?$ /buca-acik-market/ [R=301,L,NC]
+Redirect 301 /gaziemir-7-24-market-servisi/ /gaziemir-acik-market/
+
+# Old WordPress sitemap and system routes.
 Redirect 301 /wp-sitemap.xml /sitemap.xml
-
-RedirectMatch 301 ^/iletisim$ /iletisim/
-RedirectMatch 301 ^/hakkimizda$ /hakkimizda/
-RedirectMatch 301 ^/hizmet-bolgelerimiz$ /hizmet-bolgelerimiz/
-
-# WordPress system endpoints are retired on the static site.
 Redirect 301 /wp-admin/ /
 Redirect 301 /wp-login.php /
 Redirect 301 /xmlrpc.php /
 Redirect 301 /wp-json/ /
+RedirectMatch 301 ^/iletisim$ /iletisim/
+RedirectMatch 301 ^/hakkimizda$ /hakkimizda/
+RedirectMatch 301 ^/hizmet-bolgelerimiz$ /hizmet-bolgelerimiz/
 
 ErrorDocument 404 /404.html
 

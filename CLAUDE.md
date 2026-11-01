@@ -1,13 +1,14 @@
-# Proje notları — 724 Açık Market
+# Gece Market Servis — AI Proje Notları
 
-- Yayın adresi: https://724acikmarket.com/
-- İzmir odaklı günlük market ihtiyaçları için telefon/WhatsApp üzerinden iletişim.
-- Telefon: +90 532 364 95 23; numarayı değiştirirken tel ve WhatsApp bağlantılarını ve JSON-LD verilerini birlikte güncelle.
-- Sepet, online ödeme veya müşteri hesabı kullanılmaz.
-- Ürün içerikleri günlük gıda, alkolsüz içecek, temizlik ve kişisel bakım odaklıdır.
-- İlçe sayfaları: Buca, Gaziemir, Bornova, Karşıyaka, Konak, Karabağlar, Bayraklı, Çiğli, Balçova, Narlıdere. Ayrıca gece açık market sayfası var.
-- Her sayfada özgün title, description, canonical, Open Graph ve WebPage yapılandırılmış verisi bulunur.
-- Eski arama reklamı kodları kaldırılmıştır; yeni reklam hesabı bağlanmadan önce politika ve ölçüm onayı gerekir.
-- .htaccess içindeki eski WordPress URL yönlendirmelerini 301 kaybı yaşamamak için koru.
-- Teslimat sürelerini kesin biçimde vadetme; adres ve stok durumuna göre teyit et.
-- Verilen işletme bilgilerinin doğruluğu ve yerel mevzuat uyumu yayından önce kontrol edilmeli.
+Yayın: https://gecemarketservis.com.tr/
+Geliştirme dalı: gecemarketservis-com-tr-yayin
+Marka: Gece Market Servis
+İletişim: +90 532 364 95 23 / WhatsApp wa.me/905323649523
+
+Amaç: İzmir'de açık market ve gece açık market için telefon/WhatsApp sipariş iletişimi.
+Online ödeme, üyelik, sepet, WordPress ve MySQL yoktur.
+SEO: 16 sayfalı sitemap, canonical, OG, JSON-LD, özgün Buca/Gaziemir/gece market sayfaları.
+Yayında eski Google Ads etiketi kullanılmaz.
+
+ÖNEMLİ: Başka bir domain için ayrılmış main dalına birleştirme yapılmaz. Yalnız bu dal, gecemarketservis.com.tr için dağıtılır.
+İşletme iddialarını doğrula, teslimat süresini garanti etme, uzaktan satışı yasak ürünler veya reklam politikalarını aşmaya yönelik içerik ekleme.

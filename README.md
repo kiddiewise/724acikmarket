@@ -1,35 +1,37 @@
-# 724 Açık Market — İzmir
+# Gece Market Servis — İzmir
 
-Mobil öncelikli statik HTML, CSS ve JavaScript sitesi. Yayın adresi: https://724acikmarket.com/.
+Yayın hedefi: **https://gecemarketservis.com.tr/**. Bu proje statik HTML, CSS, JavaScript ve görsellerden oluşur. WordPress, MySQL veya PHP kurulumu gerektirmez.
 
-## Amaç
+## Ayrı domain / ayrı yayın dalı
 
-Günlük market ihtiyaçları için telefon ve WhatsApp ile sipariş iletişimi. Sitede sepet, hesap veya kredi kartı ödeme formu bulunmaz.
+**UYARI:** Bu repository'nin `main` dalı https://724acikmarket.com/ sitesi için ayrılmıştır. Bu projeyi `main` dalına birleştirmeyin ve eski domaine dağıtmayın.
 
-- Telefon: +90 532 364 95 23 (`tel:+905323649523`)
+Gece Market Servis için yayın dalı: `gecemarketservis-com-tr-yayin`.
+
+## Kurulum
+
+1. hPanel üzerinden sadece `gecemarketservis.com.tr` alan adına bağlı siteyi ve `public_html` dizinini seçin.
+2. Önce WordPress dosyalarını ve veritabanını yedekleyin. E-posta/DNS etkilerini ayrıca değerlendirin.
+3. WordPress yerine statik site kurulacağı için WordPress'i yeniden kurmayın; veritabanı da gerekmiyor.
+4. Yalnızca **bu domaine ait** WordPress dosyaları temizlendikten sonra bu daldaki proje dosyalarının içeriğini `public_html` köküne yükleyin. Üst klasör açıp iç içe bırakmayın.
+5. Gizli dosya `.htaccess` dahil bütün proje içeriğini yüklediğinizden emin olun.
+6. HTTPS, mobil görünüm, tel/WhatsApp, tüm bölgeler, 301 yönlendirmeleri ve `sitemap.xml` dosyasını test edin.
+7. Google Search Console'a `https://gecemarketservis.com.tr/sitemap.xml` gönderin.
+
+## İletişim
+
+- Telefon: `+90 532 364 95 23`
+- Telefon bağlantısı: `tel:+905323649523`
 - WhatsApp: `https://wa.me/905323649523`
-- Yerel aramalar: İzmir açık market, Buca açık market, Gaziemir açık market, gece açık market.
-- Her ilçenin ayrı açıklaması, canonical URL'si, meta description alanı ve JSON-LD WebPage/BreadcrumbList verisi vardır.
-- `gece-acik-market/`: gece market aramaları için özgün içerik.
-- `robots.txt`, `sitemap.xml` ve Apache yönlendirmeleri korunur.
 
-## Yayınlama
+## SEO
 
-1. Değişiklikleri canlıya almadan önce mobil ve masaüstünde önizleyin.
-2. Hostinger üzerinde statik dosyaları yayın dizinine aktarın veya var olan dağıtım sürecinizi kullanın.
-3. WhatsApp ve telefon bağlantılarını gerçek cihazda doğrulayın.
-4. Google Search Console'da `https://724acikmarket.com/sitemap.xml` adresini yeniden gönderin.
-5. Yayına almadan önce hizmet bölgeleri, 7/24 iletişim ve teslimat açıklamalarının işletmenin gerçek koşullarıyla uyumlu olduğunu onaylayın.
+- Sayfaya özel başlık ve açıklama, canonical, Open Graph ve JSON-LD.
+- Buca, Gaziemir ve diğer ilçelerin özgün yerel içerikleri.
+- İzmir gece açık market bilgi sayfası.
+- Sitemap: 16 indekslenebilir URL.
+- Eski Google Ads dönüşüm etiketi kaldırıldı, yeni Ads hesabı henüz eklenmedi.
 
-## Google Ads
+## Notlar
 
-Eski Google Ads etiketi ve dönüşüm onclick işleyicileri tüm HTML sayfalarından kaldırılmıştır. Yeni reklam hesabı etkinleştirilene kadar siteye herhangi bir Ads etiketi eklenmemiştir. Yeni dönüşüm izleme, kullanıcı rızası ve reklam politikaları değerlendirilerek ayrıca entegre edilmelidir. Alkol ve tütün ürünlerinin uzaktan satışı veya reklam politikalarını aşmaya yönelik hedefleme bu projenin kapsamında değildir.
-
-## Dosyalar
-
-- `index.html`: ana sayfa.
-- `*-acik-market/index.html`: ilçe sayfaları.
-- `gece-acik-market/index.html`: gece market sayfası.
-- `hizmet-bolgelerimiz/index.html`: bölge listesi.
-- `hakkimizda/`, `sss/`, `iletisim/`: bilgi sayfaları.
-- `style.css`: mobil öncelikli tema; `app.js`: erişilebilir mobil menü.
+Önceki WordPress Buca ve Gaziemir sayfaları için `.htaccess` içinde 301 yönlendirmeleri bulunur. Eski sitenin kalan URL'leri ayrıca Search Console üzerinden kontrol edilebilir. İşletmenin çalışma saatleri ve teslimat bölgeleri doğrulanmalıdır.
