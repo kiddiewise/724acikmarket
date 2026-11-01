@@ -1,13 +1,22 @@
-(function(){
-  function tick(){var n=new Date();var t=n.toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Istanbul'});var e=document.getElementById('clock');if(e)e.textContent=t;}
-  tick();setInterval(tick,15000);
-  var mb=document.getElementById('menuBtn'),mn=document.getElementById('mobnav');
-  if(mb&&mn)mb.addEventListener('click',function(){
-    var open=mn.classList.toggle('open');
-    mb.setAttribute('aria-expanded',open?'true':'false');
-  });
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-  }else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+(() => {
+  const menuButton = document.getElementById("menuButton");
+  const mobileNav = document.getElementById("mobileNav");
+  if (menuButton && mobileNav) {
+    const closeMenu = () => {
+      mobileNav.hidden = true;
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Menüyü aç");
+    };
+    menuButton.addEventListener("click", () => {
+      const opening = mobileNav.hidden;
+      mobileNav.hidden = !opening;
+      menuButton.setAttribute("aria-expanded", String(opening));
+      menuButton.setAttribute("aria-label", opening ? "Menüyü kapat" : "Menüyü aç");
+    });
+    mobileNav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", event => { if (event.key === "Escape") closeMenu(); });
+    window.addEventListener("resize", () => { if (window.innerWidth > 900) closeMenu(); });
+  }
+  const year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
 })();

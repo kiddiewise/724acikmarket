@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="724 Açık Market">
-  <defs>
-    <linearGradient id="g" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFB12E"/>
-      <stop offset="1" stop-color="#FF8A00"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="#0B0F1A"/>
-  <rect x="8" y="8" width="48" height="48" rx="13" fill="url(#g)"/>
-  <path d="M18 22h28l-4 20H22l-4-20Z" fill="#0B0F1A"/>
-  <path d="M24 22c0-5 3.5-8 8-8s8 3 8 8" fill="none" stroke="#0B0F1A" stroke-width="4" stroke-linecap="round"/>
-  <text x="32" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="800" fill="#FFB12E">724</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="17" fill="#103f37"/><path d="M12 19h21v8H22v5h11v8H12v-8l11-7H12z" fill="#ffffff"/><path d="M37 18h14v22H37v-7h7v-8h-7z" fill="#f6ac76"/><path d="M14 47h36" stroke="#b6e2bc" stroke-width="4" stroke-linecap="round"/></svg>

@@ -1,37 +1,35 @@
-# 724 Açık Market Static Site
+# 724 Açık Market — İzmir
 
-Statik HTML/CSS/JS site. Yayın hedefi `https://724acikmarket.com/`; mevcut WordPress sitenin yerine Hostinger/Apache ortamında yayınlanacak.
+Mobil öncelikli statik HTML, CSS ve JavaScript sitesi. Yayın adresi: https://724acikmarket.com/.
 
-## Yapı
+## Amaç
 
-- `index.html`: İzmir geneli ana landing page.
-- `*-acik-market/index.html`: Google Ads ve organik SEO için ilçe landing page'leri.
-- `hizmet-bolgelerimiz/`: tüm ilçe sayfalarına bağlantı veren hub.
-- `sss/`, `hakkimizda/`, `iletisim/`: destek sayfaları.
-- `.htaccess`: HTTPS/canonical host, eski WordPress URL 301 yönlendirmeleri ve 404 tanımı.
-- `sitemap.xml` ve `robots.txt`: arama motoru keşfi.
+Günlük market ihtiyaçları için telefon ve WhatsApp ile sipariş iletişimi. Sitede sepet, hesap veya kredi kartı ödeme formu bulunmaz.
 
-## SEO ve Ads Notları
+- Telefon: +90 532 364 95 23 (`tel:+905323649523`)
+- WhatsApp: `https://wa.me/905323649523`
+- Yerel aramalar: İzmir açık market, Buca açık market, Gaziemir açık market, gece açık market.
+- Her ilçenin ayrı açıklaması, canonical URL'si, meta description alanı ve JSON-LD WebPage/BreadcrumbList verisi vardır.
+- `gece-acik-market/`: gece market aramaları için özgün içerik.
+- `robots.txt`, `sitemap.xml` ve Apache yönlendirmeleri korunur.
 
-- Google Ads Excel planındaki final URL'ler sitedeki canonical biçimle slash'lı kullanılmalı: örnek `https://724acikmarket.com/buca-acik-market/`.
-- Google Ads tarafında `tekel`, alkol ve tütün çağrışımlı kelimelere teklif verilmez; negatif anahtar kelime listesinde tutulur.
-- Organik SEO tarafında `tekel` kelimesi yalnızca yerel kullanım anlamıyla, "gece açık market" bağlamında kullanılır.
-- Sayfalarda alkol veya tütün satışı vurgulanmaz.
+## Yayınlama
 
-## Yayına Alma
+1. Değişiklikleri canlıya almadan önce mobil ve masaüstünde önizleyin.
+2. Hostinger üzerinde statik dosyaları yayın dizinine aktarın veya var olan dağıtım sürecinizi kullanın.
+3. WhatsApp ve telefon bağlantılarını gerçek cihazda doğrulayın.
+4. Google Search Console'da `https://724acikmarket.com/sitemap.xml` adresini yeniden gönderin.
+5. Yayına almadan önce hizmet bölgeleri, 7/24 iletişim ve teslimat açıklamalarının işletmenin gerçek koşullarıyla uyumlu olduğunu onaylayın.
 
-1. Tüm dosyaları hosting public root dizinine yükle.
-2. Apache'de `.htaccess` kullanımının açık olduğundan emin ol.
-3. Eski WordPress URL'lerini kontrol et:
-   - `/buca-market-siparis-acik-tekel/` → `/buca-acik-market/`
-   - `/bornova-7-24-acik-market/` → `/bornova-acik-market/`
-   - `/izmir-tekel-market/` → `/`
-4. Google Search Console'da `https://724acikmarket.com/sitemap.xml` gönder.
-5. Google Ads final URL'lerini slash'lı canonical URL'lerle güncelle.
+## Google Ads
 
-## Kontrol
+Eski Google Ads etiketi ve dönüşüm onclick işleyicileri tüm HTML sayfalarından kaldırılmıştır. Yeni reklam hesabı etkinleştirilene kadar siteye herhangi bir Ads etiketi eklenmemiştir. Yeni dönüşüm izleme, kullanıcı rızası ve reklam politikaları değerlendirilerek ayrıca entegre edilmelidir. Alkol ve tütün ürünlerinin uzaktan satışı veya reklam politikalarını aşmaya yönelik hedefleme bu projenin kapsamında değildir.
 
-- `sitemap.xml` tüm canlı sayfaları içermeli.
-- `404.html` bilinmeyen URL'lerde görünmeli.
-- Telefon ve WhatsApp CTA'ları çalışmalı.
-- Mobil menü ve sticky alt bar görünür olmalı.
+## Dosyalar
+
+- `index.html`: ana sayfa.
+- `*-acik-market/index.html`: ilçe sayfaları.
+- `gece-acik-market/index.html`: gece market sayfası.
+- `hizmet-bolgelerimiz/index.html`: bölge listesi.
+- `hakkimizda/`, `sss/`, `iletisim/`: bilgi sayfaları.
+- `style.css`: mobil öncelikli tema; `app.js`: erişilebilir mobil menü.
