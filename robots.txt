@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://724acikmarket.com/sitemap.xml
+Sitemap: https://gecemarketservis.com.tr/sitemap.xml
