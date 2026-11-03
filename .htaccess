@@ -2,21 +2,19 @@ Options -Indexes
 DirectoryIndex index.html
 RewriteEngine On
 
-# Redirect HTTP and www traffic to the new canonical domain.
+# Canonical HTTPS and non-www host.
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\.gecemarketservis\.com\.tr$ [NC]
 RewriteRule ^ https://gecemarketservis.com.tr%{REQUEST_URI} [R=301,L]
 
-# Redirect the two previously indexed WordPress district pages.
+# Previously indexed WordPress and legacy routes.
 RewriteRule ^buca-[^-]+-7-24-market-servisi/?$ /buca-acik-market/ [R=301,L,NC]
 Redirect 301 /gaziemir-7-24-market-servisi/ /gaziemir-acik-market/
-
-# Old WordPress sitemap and system routes.
 Redirect 301 /wp-sitemap.xml /sitemap.xml
 Redirect 301 /wp-admin/ /
 Redirect 301 /wp-login.php /
 Redirect 301 /xmlrpc.php /
-Redirect 301 /wp-json/ /
+RedirectMatch 301 ^/wp-json/.*$ /
 RedirectMatch 301 ^/iletisim$ /iletisim/
 RedirectMatch 301 ^/hakkimizda$ /hakkimizda/
 RedirectMatch 301 ^/hizmet-bolgelerimiz$ /hizmet-bolgelerimiz/
@@ -24,14 +22,22 @@ RedirectMatch 301 ^/hizmet-bolgelerimiz$ /hizmet-bolgelerimiz/
 ErrorDocument 404 /404.html
 
 <IfModule mod_headers.c>
-  Header set X-Content-Type-Options "nosniff"
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "DENY"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json application/xml image/svg+xml
 </IfModule>
 
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/html "access plus 1 hour"
 </IfModule>

@@ -1,4 +1,4 @@
-# Gece Market Servis — İzmir
+# gece market — İzmir
 
 Yayın hedefi: **https://gecemarketservis.com.tr/**. Bu proje statik HTML, CSS, JavaScript ve görsellerden oluşur. WordPress, MySQL veya PHP kurulumu gerektirmez.
 
@@ -6,7 +6,7 @@ Yayın hedefi: **https://gecemarketservis.com.tr/**. Bu proje statik HTML, CSS, 
 
 **UYARI:** Bu repository'nin `main` dalı https://724acikmarket.com/ sitesi için ayrılmıştır. Bu projeyi `main` dalına birleştirmeyin ve eski domaine dağıtmayın.
 
-Gece Market Servis için yayın dalı: `gecemarketservis-com-tr-yayin`.
+gece market için yayın dalı: `gecemarketservis-com-tr-yayin`.
 
 ## Kurulum
 
@@ -27,9 +27,11 @@ Gece Market Servis için yayın dalı: `gecemarketservis-com-tr-yayin`.
 ## SEO
 
 - Sayfaya özel başlık ve açıklama, canonical, Open Graph ve JSON-LD.
-- Buca, Gaziemir ve diğer ilçelerin özgün yerel içerikleri.
+- Buca, Gaziemir ve diğer ilçeler için özgün yerel içerikler.
 - İzmir gece açık market bilgi sayfası.
 - Sitemap: 16 indekslenebilir URL.
+- Dış font veya ağır framework kullanmayan, mobil öncelikli statik arayüz.
+- WebP hero ve teslimat görselleri.
 - Eski Google Ads dönüşüm etiketi kaldırıldı, yeni Ads hesabı henüz eklenmedi.
 
 ## Notlar
